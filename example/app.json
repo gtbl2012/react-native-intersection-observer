@@ -1,0 +1,22 @@
+{
+  "name": "react-native-intersection-observer-example",
+  "displayName": "IntersectionObserver Example",
+  "expo": {
+    "name": "react-native-intersection-observer-example",
+    "slug": "react-native-intersection-observer-example",
+    "description": "Example app for react-native-intersection-observer",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
