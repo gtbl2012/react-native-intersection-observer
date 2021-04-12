@@ -13,6 +13,7 @@ export type IntersectionObserverCallback = (
   entries: IntersectionObserverEntry[],
 ) => void;
 
+// 距离屏幕四边的距离
 export interface RootMargin {
   left: number;
   right: number;
@@ -20,6 +21,7 @@ export interface RootMargin {
   bottom: number;
 }
 
+// 对象四边所在位置
 export interface BoundingClientRect {
   left: number;
   right: number;
@@ -68,9 +70,9 @@ class IntersectionObserver {
 
   private targets: Array<IElementRef> = [];
 
-  private previousInsectionRatios: Map<IElementRef, number> = new Map();
+  private previousInsectionRatios: Map<IElementRef, number> = new Map(); // 前一次的相交比例，决定是否回调
 
-  private emitterSubscription?: EmitterSubscription;
+  private emitterSubscription?: EmitterSubscription; // 事件监听器
 
   constructor(
     scope: string,

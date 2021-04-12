@@ -1,24 +1,17 @@
 import React, { PropsWithChildren } from 'react';
-import { StyleProp, View, ViewStyle } from 'react-native';
+import { View, ViewProps } from 'react-native';
 import IntersectionObserver, {
   IntersectionObserverEntry,
   RootMargin,
 } from '../IntersectionObserver';
 import { compareProps, IntersectionObserverRequiredProps } from './utils';
 
-// type CustomAttachments = symbol | number | string | Record<string, any>;
-
-interface IntersectionObserverViewProps {
-  style?: StyleProp<ViewStyle>;
+interface IntersectionObserverViewProps extends ViewProps {
   scope: string;
   rootMargin?: RootMargin;
   thresholds?: Array<number>;
-  throttle?: number;
-  // attachments?: CustomAttachments; // 附加数据，仅透传
-  onIntersectionChange?: (
-    entry: IntersectionObserverEntry,
-    // attachments?: CustomAttachments,
-  ) => void;
+  throttle?: number; // 相交检测间隔
+  onIntersectionChange?: (entry: IntersectionObserverEntry) => void;
 }
 
 class IntersectionObserverView extends React.PureComponent<
@@ -73,6 +66,7 @@ class IntersectionObserverView extends React.PureComponent<
     this.mounted = false;
   }
 
+  // 回调
   intersectionHandler = (entries: IntersectionObserverEntry[]) => {
     const { onIntersectionChange } = this.props;
     if (!onIntersectionChange) {
@@ -100,9 +94,9 @@ class IntersectionObserverView extends React.PureComponent<
   }
 
   render() {
-    const { children, style } = this.props;
+    const { children } = this.props;
     return (
-      <View ref={this.observeTargetRef} style={style} collapsable={false}>
+      <View ref={this.observeTargetRef} collapsable={false} {...this.props}>
         {children}
       </View>
     );
