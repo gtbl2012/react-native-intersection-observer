@@ -1,31 +1,29 @@
-import * as React from 'react';
+import React, { useCallback } from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import IntersectionObserver from 'react-native-intersection-observer';
+import { Text, ScrollView } from 'react-native';
+import {
+  IntersectionObserver,
+  IntersectionObserverView,
+} from 'react-native-intersection-observer';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const onScroll = useCallback(() => {
+    IntersectionObserver.emitEvent('example');
+  }, []);
 
-  React.useEffect(() => {
-    IntersectionObserver.multiply(3, 7).then(setResult);
+  const onIntersectionChange = useCallback((entry) => {
+    console.log('onIntersectionChange', entry);
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <ScrollView onScroll={onScroll}>
+      <IntersectionObserverView
+        scope="example"
+        thresholds={[0.5]}
+        onIntersectionChange={onIntersectionChange}
+      >
+        <Text>Something you want to check exposure</Text>
+      </IntersectionObserverView>
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});

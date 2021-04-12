@@ -1,5 +1,2 @@
-export default {
-  multiply(a: number, b: number) {
-    return Promise.resolve(a * b);
-  },
-};
+export { default as IntersectionObserver } from './IntersectionObserver';
+export { default as IntersectionObserverView } from './IntersectionObserverView';

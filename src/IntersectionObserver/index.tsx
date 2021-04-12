@@ -90,17 +90,12 @@ class IntersectionObserver {
   /**
    * 触发IntersectionObserver检测，通常在onScroll时机进行触发
    * @param scope
-   * @param pageOffset 用于内嵌到原生界面的 RN 来计算最终的 pageX 和 pageY
    */
-  static emitEvent = throttle(
-    (scope: string, pageOffset: { x: number; y: number } = { x: 0, y: 0 }) => {
-      DeviceEventEmitter.emit(IntersectionObeserverEvent, {
-        scope,
-        pageOffset,
-      });
-    },
-    50,
-  );
+  static emitEvent = throttle((scope: string) => {
+    DeviceEventEmitter.emit(IntersectionObeserverEvent, {
+      scope,
+    });
+  }, 50);
 
   /**
    * 开始监听指定元素
