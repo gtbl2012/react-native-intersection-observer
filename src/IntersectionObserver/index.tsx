@@ -5,7 +5,7 @@ import {
   Dimensions,
 } from 'react-native';
 import throttle from 'lodash/throttle';
-import { getLastMatchedThreshold, getMedian } from './utils';
+import { getLastMatchedThreshold, restrictValueInRange } from './utils';
 
 export type IElementRef = React.ElementRef<HostComponent<unknown>> | null;
 
@@ -230,22 +230,22 @@ class IntersectionObserver {
     const displayAreaRight = pageWidth - this.rootMargin.right;
 
     // 计算目标元素可视区域
-    const visibleTop = getMedian(
+    const visibleTop = restrictValueInRange(
       displayAreaTop,
       displayAreaBottom,
       boundingClientRect.top,
     );
-    const visibleBottom = getMedian(
+    const visibleBottom = restrictValueInRange(
       displayAreaTop,
       displayAreaBottom,
       boundingClientRect.bottom,
     );
-    const visibleLeft = getMedian(
+    const visibleLeft = restrictValueInRange(
       displayAreaLeft,
       displayAreaRight,
       boundingClientRect.left,
     );
-    const visibleRight = getMedian(
+    const visibleRight = restrictValueInRange(
       displayAreaLeft,
       displayAreaRight,
       boundingClientRect.right,

@@ -1,4 +1,4 @@
-export function getMedian(start = 0, end = 0, value = 0) {
+export function restrictValueInRange(start = 0, end = 0, value = 0) {
   return Math.min(Math.max(start, value), end);
 }
 
