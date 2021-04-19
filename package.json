@@ -31,7 +31,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "intersection",
+    "observer"
   ],
   "repository": "https://github.com/gtbl2012/react-native-intersection-observer",
   "author": "guanlanhe <guanlanhe@tencent.com> (https://tech.weread.qq.com)",
