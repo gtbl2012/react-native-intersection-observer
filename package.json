@@ -1,5 +1,5 @@
 {
-  "name": "react-native-intersection-observer",
+  "name": "rn-intersection-observer",
   "version": "0.1.0",
   "description": "Intersection observer for complex or embedded react native view",
   "main": "lib/commonjs/index",
@@ -10,7 +10,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-intersection-observer.podspec",
+    "rn-intersection-observer.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
@@ -33,13 +33,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://git.woa.com/guanlanhe/react-native-intersection-observer",
+  "repository": "https://github.com/gtbl2012/react-native-intersection-observer",
   "author": "guanlanhe <guanlanhe@tencent.com> (https://tech.weread.qq.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://git.woa.com/guanlanhe/react-native-intersection-observer/issues"
+    "url": "https://github.com/gtbl2012/react-native-intersection-observer/issues"
   },
-  "homepage": "https://git.woa.com/guanlanhe/react-native-intersection-observer#readme",
+  "homepage": "https://github.com/gtbl2012/react-native-intersection-observer#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
