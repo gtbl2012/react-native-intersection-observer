@@ -1,8 +1,8 @@
 # react-native-intersection-observer
 
-react-native-intersection-observer is a React Native implementation of [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). An easier way to detect "View" exposure in complex application.
+react-native-intersection-observer基于Web场景下最流行的Intersection Observer API对measureInWindow进行封装，同时基于事件通知进行检测触发，实现了较为复杂的场景下组件曝光检测的能力。
 
-English | [中文](https://github.com/gtbl2012/react-native-intersection-observer/blob/main/README_CN.md)
+[English](https://github.com/gtbl2012/react-native-intersection-observer/blob/main/README.md) | 中文
 
 ## Installation
 
@@ -12,7 +12,7 @@ npm install rn-intersection-observer
 
 ## Usage
 
-### Target view
+### 需要被检测的对象
 
 ```tsx
 <IntersectionObserverView
@@ -24,7 +24,7 @@ npm install rn-intersection-observer
 </IntersectionObserverView>
 ```
 
-### Trigger detection from React Native
+### 从React Native触发检测
 
 ```tsx
 const onScroll = useCallback(
@@ -40,7 +40,7 @@ return (
 );
 ```
 
-### Trigger detection from Native (Android example)
+### 从原生触发检测(Android)
 
 ```java
 getReactApplicationContext()
