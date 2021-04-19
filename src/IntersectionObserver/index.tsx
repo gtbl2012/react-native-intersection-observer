@@ -72,7 +72,7 @@ class IntersectionObserver {
 
   private previousInsectionRatios: Map<IElementRef, number> = new Map(); // 前一次的相交比例，决定是否回调
 
-  private emitterSubscription?: EmitterSubscription; // 事件监听器
+  private emitterSubscription: EmitterSubscription | null = null; // 事件监听器
 
   constructor(
     scope: string,
@@ -113,7 +113,7 @@ class IntersectionObserver {
         );
       });
     }
-    if (this.targets.length > 0) {
+    if (this.targets.length > 0 && !this.emitterSubscription) {
       this.emitterSubscription = DeviceEventEmitter.addListener(
         IntersectionObeserverEvent,
         throttle(this.handleEmitterEvent, this.throttle),
@@ -132,7 +132,7 @@ class IntersectionObserver {
     }
     if (this.targets.length <= 0) {
       this.emitterSubscription?.remove();
-      // globalExistingIntersectionObserver -= 1;
+      this.emitterSubscription = null;
     }
   };
 
