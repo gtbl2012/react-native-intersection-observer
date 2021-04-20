@@ -4,6 +4,14 @@ react-native-intersection-observer基于Web场景下最流行的Intersection Obs
 
 [English](https://github.com/gtbl2012/react-native-intersection-observer/blob/main/README.md) | 中文
 
+## 依赖
+
+本组件基于以下依赖版本开发，同时可用于支持“measureInWindow”的低版本框架。
+
+React >= 16.13.1
+
+React-native >= 0.63.4
+
 ## 安装
 
 ```sh
@@ -64,7 +72,7 @@ getReactApplicationContext()
 | 参数名 | 类型 | 含义 |
 | :----- | :--- | :--- |
 | scope | string | 当前View所属场景，用于触发时区分 |
-| rootMargin | {top: number, left: number, bottom: number, right: number} | 触发区域距离屏幕四边的距离 |
+| [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) | {top: number, left: number, bottom: number, right: number} | 触发区域距离屏幕四边的距离 |
 | [thresholds](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds) | number[] | 相交阈值，当相交比例达到设定值时触发回调 |
 | throttle | number | 触发检测的时间间隔(ms) |
 

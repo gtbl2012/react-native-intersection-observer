@@ -10,6 +10,14 @@ English | [中文](https://github.com/gtbl2012/react-native-intersection-observe
 npm install rn-intersection-observer
 ```
 
+## Requirements
+
+This module was developed and tested with dependencies below. May also works fine with older versions that support "measureInWindow".
+
+React >= 16.13.1
+
+React-native >= 0.63.4
+
 ## Usage
 
 ### Target view
