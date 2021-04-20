@@ -64,9 +64,9 @@ getReactApplicationContext()
 | Props | Params Type | Description |
 | :----- | :--- | :--- |
 | scope | string | Scope of the target View, required in event trigger. |
-| rootMargin | {top: number, left: number, bottom: number, right: number} | Distance from screen edge of detect area. |
-| thresholds | number[] | Intersection ratios which should trigger intersection callbacks. |
-| throttle | number | throttle time between each detection(ms). |
+| [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) | {top: number, left: number, bottom: number, right: number} | Distance from screen edge of detect area. |
+| [thresholds](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds) | number[] | Intersection ratios which should trigger intersection callbacks. |
+| throttle | number | Throttle time between each detection(ms). |
 
 
 ### 2) Intersection Callback (onIntersectionChange)
@@ -75,7 +75,7 @@ Callback parameters contained info of each target which triggered intersection c
 
 | Params | Params Type | Description |
 | :----- | :--- | :--- |
-| boundingClientRect | {top: number, left: number, bottom: number, right: number} | Position of target View's edge. |
+| [boundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) | {top: number, left: number, bottom: number, right: number} | Position of target View's edge. |
 | intersectionRatio | number | Intersection ratio of target View in detect area |
 | intersectionRect | {top: number, left: number, bottom: number, right: number} | Position of intersection area's edge. |
 | target | Ref | Ref of target View |

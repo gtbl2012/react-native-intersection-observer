@@ -65,7 +65,7 @@ getReactApplicationContext()
 | :----- | :--- | :--- |
 | scope | string | 当前View所属场景，用于触发时区分 |
 | rootMargin | {top: number, left: number, bottom: number, right: number} | 触发区域距离屏幕四边的距离 |
-| thresholds | number[] | 相交阈值，当相交比例达到设定值时触发回调 |
+| [thresholds](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds) | number[] | 相交阈值，当相交比例达到设定值时触发回调 |
 | throttle | number | 触发检测的时间间隔(ms) |
 
 
@@ -75,7 +75,7 @@ getReactApplicationContext()
 
 | 回调参数名 | 类型 | 含义 |
 | :----- | :--- | :--- |
-| boundingClientRect | {top: number, left: number, bottom: number, right: number} | 元素四边位置 |
+| [boundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) | {top: number, left: number, bottom: number, right: number} | 元素四边位置 |
 | intersectionRatio | number | 相交比例 |
 | intersectionRect | {top: number, left: number, bottom: number, right: number} | 相交区域四边位置 |
 | target | Ref | 触发元素的Ref |
