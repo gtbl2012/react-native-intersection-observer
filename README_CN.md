@@ -4,17 +4,21 @@ react-native-intersection-observer基于Web场景下最流行的Intersection Obs
 
 [English](https://github.com/gtbl2012/react-native-intersection-observer/blob/main/README.md) | 中文
 
-## Installation
+## 安装
 
 ```sh
 npm install rn-intersection-observer
 ```
 
-## Usage
+## 使用
 
 ### 需要被检测的对象
 
 ```tsx
+import { IntersectionObserverView } from 'rn-intersection-observer';
+
+// ...
+
 <IntersectionObserverView
     scope="YourOwnScope"
     thresholds={[0.8]}
@@ -27,15 +31,20 @@ npm install rn-intersection-observer
 ### 从React Native触发检测
 
 ```tsx
+import { IntersectionObserver } from 'rn-intersection-observer';
+
+// ...
+
 const onScroll = useCallback(
     (event) => {
         IntersectionObserver.emitEvent('YourOwnScope');
     },
     [],
 );
+
 return (
     <ScrollView onScroll={onScroll}>
-    	{/* Scroll view contains IntersectionObserverView */}
+        {/* Scroll view contains IntersectionObserverView */}
     </ScrollView>
 );
 ```
