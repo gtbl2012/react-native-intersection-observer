@@ -4,6 +4,8 @@ react-native-intersection-observer is a React Native implementation of [Intersec
 
 English | [中文](https://github.com/gtbl2012/react-native-intersection-observer/blob/main/README_CN.md)
 
+[![NPM](https://nodei.co/npm/rn-intersection-observer.png?compact=true)](https://npmjs.org/package/rn-intersection-observer)
+
 ## Installation
 
 ```sh
