@@ -71,7 +71,7 @@ getReactApplicationContext()
 
 ### 2) Intersection Callback (onIntersectionChange)
 
-Callback parameters contained info of each target which triggered intersection callback：
+Callback parameter is an array containes info of each target which triggered intersection callback：
 
 | Params | Params Type | Description |
 | :----- | :--- | :--- |
