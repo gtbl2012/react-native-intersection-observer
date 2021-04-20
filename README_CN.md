@@ -73,7 +73,7 @@ getReactApplicationContext()
 
 回调函数函数的回调值是一个由所有在本次回调命中了阈值的View，数组的每一个元素结构如下：
 
-| key | 类型 | 含义 |
+| 回调参数名 | 类型 | 含义 |
 | :----- | :--- | :--- |
 | boundingClientRect | {top: number, left: number, bottom: number, right: number} | 元素四边位置 |
 | intersectionRatio | number | 相交比例 |

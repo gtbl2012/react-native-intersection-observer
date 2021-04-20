@@ -61,7 +61,7 @@ getReactApplicationContext()
 
 ### 1) IntersectionObserver / IntersectionObserverView
 
-| 参数名 | 类型 | 含义 |
+| Props | Params Type | Description |
 | :----- | :--- | :--- |
 | scope | string | Scope of the target View, required in event trigger. |
 | rootMargin | {top: number, left: number, bottom: number, right: number} | Distance from screen edge of detect area. |
@@ -73,7 +73,7 @@ getReactApplicationContext()
 
 Callback parameters contained info of each target which triggered intersection callback：
 
-| key | 类型 | 含义 |
+| Params | Params Type | Description |
 | :----- | :--- | :--- |
 | boundingClientRect | {top: number, left: number, bottom: number, right: number} | Position of target View's edge. |
 | intersectionRatio | number | Intersection ratio of target View in detect area |
