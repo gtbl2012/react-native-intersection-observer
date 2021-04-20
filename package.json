@@ -1,6 +1,6 @@
 {
   "name": "rn-intersection-observer",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Intersection observer for complex or embedded react native view",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
