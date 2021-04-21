@@ -91,6 +91,10 @@ getReactApplicationContext()
 
 注：使用IntersectionObserverView时由于只有单个View，回调只有单个Entry。
 
+## 相关文章
+
+[一种适用于复杂场景下React Native组件曝光检测的方案](https://tech.weread.qq.com/exposure-detection-on-complex-react-native/)
+
 ## License
 
 MIT
